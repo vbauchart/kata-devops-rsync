@@ -9,6 +9,8 @@ COPY --chown=simulation ssh/ /home/simulation/.ssh
 
 COPY --chown=simulation data/ /home/simulation
 
+COPY bin/ /usr/bin
+
 USER simulation
 
 RUN chmod 700 /home/simulation/.ssh &&\
