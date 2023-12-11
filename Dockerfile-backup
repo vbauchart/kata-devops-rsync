@@ -1,0 +1,15 @@
+from debian
+
+RUN apt update && \
+    apt install -y openssh-server && \
+    ssh-keygen -A && \
+    mkdir -p /run/sshd/
+
+RUN useradd -m operation -s /bin/bash
+
+COPY --chown=operation ssh/id_ed25519.pub /home/operation/.ssh/authorized_keys
+
+RUN chmod 700 /home/operation/.ssh &&\
+    chmod 600 /home/operation/.ssh/*
+
+CMD /usr/sbin/sshd -D

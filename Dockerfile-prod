@@ -1,0 +1,15 @@
+from debian
+
+RUN apt update && \
+    apt install -y openssh-client rsync
+
+RUN useradd -m simulation -s /bin/bash
+
+COPY --chown=simulation ssh/ /home/simulation/.ssh
+
+USER simulation
+
+RUN chmod 700 /home/simulation/.ssh &&\
+    chmod 600 /home/simulation/.ssh/*
+
+CMD sleep 130m
