@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" modified="2023-12-11T20:58:06.781Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="aK1SFbIHRqTdkGhkjSxh" version="22.1.7" type="device">
+  <diagram name="Page-1" id="E9LIO50E5n2HyO6L7fbJ">
+    <mxGraphModel dx="2074" dy="1077" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="500" y="200" width="250" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="70" y="200" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-3" value="/home/operation" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="110" y="290" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-4" value="&lt;div align=&quot;left&quot; style=&quot;font-size: 17px;&quot;&gt;/home/simulation/RH&lt;br style=&quot;font-size: 17px;&quot;&gt;/home/simulation/SITE&lt;/div&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 17px;&quot;&gt;/home/simulation/...&lt;br style=&quot;font-size: 17px;&quot;&gt;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;align=left;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="540" y="320" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=55;exitPerimeter=0;fontSize=17;" edge="1" parent="1" source="Fkbg0o3R3Rs6liqmuoAv-12" target="Fkbg0o3R3Rs6liqmuoAv-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="580" as="sourcePoint" />
+            <mxPoint x="440" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-6" value="TCP/22 (SSH)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=17;" vertex="1" connectable="0" parent="Fkbg0o3R3Rs6liqmuoAv-5">
+          <mxGeometry x="0.3567" y="-1" relative="1" as="geometry">
+            <mxPoint x="40" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-7" value="ubuntusimulation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="530" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-8" value="&lt;div style=&quot;font-size: 17px;&quot;&gt;ubuntusauvegarde&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="90" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-9" value="&lt;h1 style=&quot;font-size: 17px;&quot;&gt;Sauvegarde&lt;/h1&gt;&lt;p style=&quot;font-size: 17px;&quot;&gt;rsync -rv --delete /home/simulation/RH operation@ubuntusauvegarde:/home/operation/backups/20231112/&lt;br style=&quot;font-size: 17px;&quot;&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="50" y="510" width="740" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-11" value="&lt;h1 style=&quot;font-size: 17px;&quot;&gt;Restauration&lt;/h1&gt;&lt;p style=&quot;font-size: 17px;&quot;&gt;rsync -rv --delete operation@ubuntusauvegarde:/home/operation/backups/20231112/RH  /home/simulation/&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="44" y="630" width="740" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Fkbg0o3R3Rs6liqmuoAv-12" value="&lt;div align=&quot;left&quot;&gt;#crontab&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;0 2 * * * rsync&lt;/div&gt;" style="shape=card;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="550" y="210" width="80" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
