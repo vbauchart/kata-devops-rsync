@@ -1,11 +1,13 @@
 from debian
 
 RUN apt update && \
-    apt install -y openssh-server && \
+    apt install -y openssh-server rsync && \
     ssh-keygen -A && \
     mkdir -p /run/sshd/
 
-RUN useradd -m operation -s /bin/bash
+RUN useradd -m operation -s /bin/bash && \
+    mkdir /home/operation/backups/ && \
+    chown operation /home/operation/backups/
 
 COPY --chown=operation ssh/id_ed25519.pub /home/operation/.ssh/authorized_keys
 

@@ -7,6 +7,8 @@ RUN useradd -m simulation -s /bin/bash
 
 COPY --chown=simulation ssh/ /home/simulation/.ssh
 
+COPY --chown=simulation data/ /home/simulation
+
 USER simulation
 
 RUN chmod 700 /home/simulation/.ssh &&\
